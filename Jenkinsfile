@@ -1,7 +1,5 @@
-pipeline {
- // agent {
- //  docker { image 'node:latest' }
- // }
+
+  agent none
   stages {
     stage('Install') {
       steps { sh 'npm install' }
@@ -22,4 +20,3 @@ pipeline {
       steps { sh 'npm run-script build' }
     }
   }
-}
